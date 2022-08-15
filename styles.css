@@ -1,0 +1,90 @@
+body {
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+#container {
+  position: absolute;
+  top: 43%;
+  left: 25%;
+  width: 40%;
+  height: 45%;
+}
+
+button {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.one {
+  background: url('images/ylwcan.png');
+  left: 15%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.two {
+  background: url('images/blu.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.three {
+  background: url('images/greencan.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 120%;
+  transform: rotate(90deg);
+  left: 50%;
+  top: 5%;
+}
+
+.wrapper {
+  position: absolute;
+  width: 12%;
+  height: 13%;
+  bottom: 0;
+  left: 12%;
+}
+
+.light {
+  position: absolute;
+  background: url('images/coppers.png');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 15%;
+  right: 5%;
+  height: 13% !important;
+}
+
+img {
+  position: absolute;
+  width: 80%;
+  height: 110%;
+}
+
+#light1 {
+  width: 40% !important;
+  height: 100% !important;
+  right: 0;
+}
+
+#light0 {
+  width: 40% !important;
+  height: 100% !important;
+  left: 0;
+}
