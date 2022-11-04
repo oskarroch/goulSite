@@ -1,18 +1,16 @@
-const spray = new Audio('images/SprayCan_sound_effect_TubeRipper.com.mp3');
-const em = new Audio('images/em.mp3');
-const police = new Audio('images/sound.mp3');
+const spray = new Audio("images/SprayCan_sound_effect_TubeRipper.com.mp3");
+const police = new Audio("images/sound.mp3");
 let domElement;
 let finished = false;
 let array = [];
-let num = 0;
 let stopped = false;
 
-$(window).on('load', function () {
-  $('#light0').fadeOut(0);
-  $('#light1').fadeOut(0);
+$(window).on("load", () => {
+  $("#light0").fadeOut(0);
+  $("#light1").fadeOut(0);
 });
 //random graffiti appearing on click
-$(".one, .two, .three").click(function () {
+$("#one, #two, #three").on("click", () => {
   if (finished === false) {
     finished = true;
     setTimeout(funi, 3800);
@@ -21,22 +19,6 @@ $(".one, .two, .three").click(function () {
     setTimeout(song, 2400);
   }
 });
-
-function song() {
-  if (num === 0) {
-    em.play();
-    num = 1;
-  } else {
-    return;
-  }
-}
-
-em.addEventListener('ended', function () {
-  if (!stopped) {
-    this.currentTime = 0;
-    this.play();
-  }
-}, false);
 
 function paint() {
   let num = Math.floor(Math.random() * 4);
@@ -47,15 +29,15 @@ function paint() {
   if (lastEl == num) {
     paint();
   } else {
-    domElement = $('<img class="oi" src="images/paint' + num + '.png"/>');
-    $("#container").append(domElement);
+    domElement = $('<img class="graffiti" src="images/paint' + num + '.png"/>');
+    $("#graffitiContainer").append(domElement);
     $(domElement).fadeOut(0);
     $(domElement).fadeIn(2000);
   }
-};
+}
 
 //remove graffiti on click
-$(".light").on('click', function () {
+$("#light").on("click", () => {
   police.play();
   lightsOn0();
   setTimeout(lightsOn1, 800);
@@ -64,17 +46,15 @@ $(".light").on('click', function () {
 });
 
 function fadeOut() {
-  $(".oi").fadeOut();
+  $(".graffiti").fadeOut();
   police.pause();
   police.currentTime = 0;
 }
 
 function remove() {
-  $(".oi").remove();
+  $(".graffiti").remove();
   stopped = true;
   num = 0;
-  em.pause();
-  em.currentTime = 0;
 }
 
 //additional stuff
@@ -84,8 +64,8 @@ function funi() {
 
 function lightsOn0() {
   for (let index = 0; index < 4; index++) {
-    $('#light1').fadeIn(800);
-    $('#light1').fadeOut(800);
+    $("#light1").fadeIn(800);
+    $("#light1").fadeOut(800);
   }
 }
 
