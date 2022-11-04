@@ -6,6 +6,10 @@ html {
   height: 100%;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
 #wrapper {
   background-image: url("images/background.jpg");
   background-size: cover;
@@ -26,6 +30,14 @@ html {
   height: 540px;
 }
 
+#canWrapper {
+  position: absolute;
+  width: 200px;
+  height: 180px;
+  bottom: -15px;
+  left: 12%;
+}
+
 #one {
   left: 35px;
 }
@@ -36,21 +48,18 @@ html {
   bottom: -32px;
 }
 
-#canWrapper {
-  position: absolute;
-  width: 200px;
-  height: 180px;
-  bottom: -15px;
-  left: 12%;
-}
-
 #light {
   float: right;
   height: 150px;
   aspect-ratio: 2/1;
 }
 
-#light:hover {
+#policeLight1 {
+  right: 0;
+}
+
+#policeLight0 {
+  left: 0;
 }
 
 .graffiti {
@@ -59,26 +68,14 @@ html {
   height: 100%;
 }
 
-#light1 {
+.policeLights {
   position: absolute;
   width: 40%;
   height: 100%;
-  right: 0;
-}
-
-#light0 {
-  position: absolute;
-  width: 40%;
-  height: 100%;
-  left: 0;
 }
 
 .can {
   position: absolute;
   width: 80px;
   aspect-ratio: 1/2.1;
-}
-
-.can:hover {
-  cursor: pointer;
 }

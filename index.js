@@ -6,17 +6,16 @@ let array = [];
 let stopped = false;
 
 $(window).on("load", () => {
-  $("#light0").fadeOut(0);
-  $("#light1").fadeOut(0);
+  $("#policeLight0").fadeOut(0);
+  $("#policeLight1").fadeOut(0);
 });
 //random graffiti appearing on click
 $("#one, #two, #three").on("click", () => {
   if (finished === false) {
     finished = true;
-    setTimeout(funi, 3800);
+    setTimeout(isFinished, 3800);
     spray.play();
     setTimeout(paint, 1800);
-    setTimeout(song, 2400);
   }
 });
 
@@ -58,20 +57,20 @@ function remove() {
 }
 
 //additional stuff
-function funi() {
+function isFinished() {
   finished = false;
 }
 
 function lightsOn0() {
   for (let index = 0; index < 4; index++) {
-    $("#light1").fadeIn(800);
-    $("#light1").fadeOut(800);
+    $("#policeLight0").fadeIn(800);
+    $("#policeLight0").fadeOut(800);
   }
 }
 
 function lightsOn1() {
   for (let index = 0; index < 4; index++) {
-    $("#light0").fadeIn(800);
-    $("#light0").fadeOut(800);
+    $("#policeLight1").fadeIn(800);
+    $("#policeLight1").fadeOut(800);
   }
 }
